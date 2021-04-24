@@ -1,0 +1,9 @@
+public class banco{
+   private cliente;
+   public persona(){
+      this.banco = banco;
+   }
+   public void banco() {
+      persona.cliente();
+   }
+}
