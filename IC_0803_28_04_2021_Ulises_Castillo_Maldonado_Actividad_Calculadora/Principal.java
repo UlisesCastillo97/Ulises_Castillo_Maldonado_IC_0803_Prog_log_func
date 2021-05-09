@@ -1,24 +1,35 @@
 public class Principal{
 	public static void main(String[] args) {
-		Principal.engine((x, y) -> x + y);
-		Principal.engine((x, y) -> x * y);
-		Principal.engine((x, y) -> x / y);
-		Principal.engine((x, y) -> x - y);
-		Principal.engine((x, y) -> x % y);
+		Principal.engine((long x, long y) -> x + y);
+		Principal.engine((int x, int y) -> x * y);
+		try{
+                 Principal.engine((int x, int y) -> x / y);
+              }catch (Exception e) {
+                 System.out.println("lo siento no puedes dividir un numero entre cero!!!!!");
+              }
+		Principal.engine((int x, int y) -> x - y);
+                try{
+		Principal.engine((long x, long y) -> x % y);
+              }catch (Exception e) {
+                 System.out.println("lo siento no se puede realizar la operacion con cero!!!!!");
+              }
+                   
 	}
 
-	//sobrecarga de metodos
+	//sobrecarga de metodos sobreescribirlos
 	private static void engine(CalculadoraInt cal){
-		int x = 2, y = 4;
+		int x = 2, y = 0;
 		int resultado = cal.calcular(x, y);
-		System.out.println("resultado = " + resultado);
+                System.out.println("resultado = " + resultado);
+		
 	}
-        //correccion de ambighuedad
-        //dos metodos pueden tener el mismo nombre pero no los mismos pararametros (argumentos)
-        //se llama sobrecarga de metodos o constructores porque tienen el mismo nombre
-	private static void engine(CalculadoraLong cal, CalculadoraLong a){
-		long x = 2, y = 4;
+	private static void engine(CalculadoraLong cal){
+		long x = 2, y = 0;
 		long resultado = cal.calcular(x, y);
 		System.out.println("resultado = " + resultado);
 	}
 }
+        //correccion de ambighuedad
+        //dos metodos pueden tener el mismo nombre pero no los mismos pararametros (argumentos)
+        //se llama sobrecarga de metodos o constructores porque tienen el mismo nombre
+	
