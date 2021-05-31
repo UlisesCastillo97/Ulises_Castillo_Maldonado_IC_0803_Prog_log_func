@@ -6,6 +6,7 @@ public class LambdaTest{
                                                                
      //op.imprimeSuma(5, 10);
      LambdaTest objeto = new LambdaTest();
+     //se esta instanciando el metodo 
      objeto.miMetodo(op, 10, 10);
     }
     public void miMetodo(Operaciones op, int num1, int num2){

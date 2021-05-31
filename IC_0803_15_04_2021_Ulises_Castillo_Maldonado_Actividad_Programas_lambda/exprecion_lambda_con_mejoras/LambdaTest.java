@@ -7,7 +7,10 @@ public class LambdaTest{
      //ft.saludar();
 
      LambdaTest objeto = new LambdaTest();
+     // se esta instanciando un nuevo objeto labdatest que es un nuevo objeto
+     //guardmos un metodo abstracto reserve memoria dinamica solo reserva depende lo que contenga
      objeto.miMetodo(ft);
+     //se le asigna parametros ft e invocando al metodo mi metodo una instacia 
     }
 
     public void miMetodo(FunctionTest parametro){
